@@ -28,6 +28,18 @@ const obj2={
 // const obj3=Object.assign({},obj1,obj2)// store all objects values into one object var
 const obj3={...obj1,...obj2} // another example
 // if check the property of object true or false then use 
-console.log(tinderUser.hasOwnProperty("name"))
+// console.log(tinderUser.hasOwnProperty("name"))
 // check the key inside object ? true/false return
 // console.log(obj3);
+
+// Destructring *********
+const course={
+    courseName:"js with khan",
+    price:"12",
+    courseInstructor:"khan"
+}
+course.courseInstructor // khan
+// destructuring 
+const {courseInstructor}=course // destructure
+const {courseInstructor:Instructor}=course // destructure with different name or assign another name 
+console.log(courseInstructor,Instructor);
