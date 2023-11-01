@@ -40,5 +40,13 @@ total=>undefined
 // num1=> allocate value e.g 10
 // num2=> allocate value e.g 5
 // total=> allocate value e.g 15 return to global execuation phase or context (1) and after that for function where they can generate box can be delete after return value of function
+result1 => 15 
+
+
+//**********Call Stack */
+// 1 => Global Execution =>{
+Lifo // LAST IN FIRST OUT IN CALL STACK 
+[ONE(),TWO(),THREE()] => First Out THREE(),TWO()  THEN ONE ()
+}
 
 
