@@ -40,3 +40,14 @@
 // }else{
 //     console.log("greater than 1000");
 // }
+
+const userLoggin=true;
+const creditCard=true;
+const emailLoggin=false;
+const googleLoggin=true;
+if(userLoggin&&creditCard){
+    console.log("Allow for shopping");
+}
+if(emailLoggin||googleLoggin){
+    console.log("User Login");
+}
