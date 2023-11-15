@@ -6,10 +6,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color:#fff;
+        }
+    </style>
 </head>
-<body>
-    <div class="bg-black">
-        <h1 class="heading">Dom Learning on Youtube</h1>
+<body class="bg-black">
+    <div>
+        <h1 id="title class="heading">Dom Learning on Youtube <span style="display: none;">Test text</span></h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda distinctio libero ducimus!</p>
     </div>
     
@@ -19,3 +25,19 @@
 // document.getElementById(id) unique id element get.
 
 // document.getElementById("id").innerHTML=element:
+
+// DOM Method
+// getElementById("title).id || .className || getAttribute("id || class") || setAttribute("class","test" // inside class another class added like test)
+
+//**********// style set with help of dom element*********//
+
+// const title =getElementById("title) => get title variable now set style ==>> title.style.backgroundColor:"green" ===> set green background-color to title
+
+
+//*******How to Add Content ********//
+
+// title.textContent => give content of element like Dom Learning on Youtube test text => also show hidden element where you can hide on the styling
+
+// title.innerText => give content of element like Dom Learning on Youtube => Not showing hidden on styling
+
+// title.innerHTML => give content of element like Dom Learning on Youtube <span>test text</span> => they show innerhtml element like after youtube give span with text
