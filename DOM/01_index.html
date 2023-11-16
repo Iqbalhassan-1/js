@@ -26,9 +26,10 @@
         <input type="password" name="" id="">
 
         <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
+            <li class="list-item">1</li>
+            <li class="list-item">2</li>
+            <li class="list-item">3</li>
+            <li class="list-item">4</li>
         </ul>
     </div>
     
@@ -72,3 +73,29 @@
 //const myul=document.querySelector("ul") => give unorderlist
 // const turngreen=myul.querySelector("li") =>
 turngreen.style.backgroundColor="green" => bg is green 
+
+//*******querySelectorAll******//
+
+//document.querySelectorAll("li") => they will give you all li into NodeList 
+
+// const tempLiList=document.querySelectorAll("li")
+ 
+if you want to change the color of li NodeList
+//  tempLiList[0].style.color="green"
+
+// const myH1=document.querySelectorAll("h1") => they give you NodeList like array . if you want to change the color of h1 then myH1.style.color="green" so they will not working if you write this myH1[0].style.color='green' so the color will change first h1.
+
+
+// if you want to change the all color of li then => tempLiList.forEach((l)=>{
+    return l.style.color='green' // all li color will be green
+})
+
+
+//********getElementByClassName**********//
+
+//const tempLiListClass=getElementByClassName("list-item") => htmlCollection
+
+// htmlCollection convert to Array.from(tempLiListClass) => they will give you array 
+//const covertedArray=Array.from(tempLiListClass) => now apply loop like map ,forEach let start with forEach => covertedArray.forEach((lii)=>{
+    return lii.style.color="red" now the list-item class change color 
+})
