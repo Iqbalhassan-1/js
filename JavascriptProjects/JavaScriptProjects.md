@@ -3,7 +3,7 @@
 ## Project #1 Link
 [Click here](https://dom-project-1.stackblitz.io)
 
-# Project #1 Code 
+# Project #1 Code Multiple Color Select for Body
 ```JavaScript
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
@@ -25,7 +25,7 @@ buttons.forEach(function (button) {
 # Project #2 Link 
 [Click here](https://bmi-project2.stackblitz.io)
 
-# Project #2 Code 
+# Project #2 Code BMI Calculator
 ```JavaScript
 // submit event learn
 
@@ -57,5 +57,19 @@ form.addEventListener('submit', function (e) {
     }
   }
 });
+```
 
+# Project #3 Link 
+[Click here](https://digital-clock-project3.stackblitz.io)
+
+# Project #3 Code Digital Clock
+
+```Javascript
+const clock = document.getElementById('clock');
+// run function every 1sec
+setInterval(function () {
+  let date = new Date();
+  // console.log(date.toLocaleTimeString());
+  clock.innerHTML = date.toLocaleTimeString();
+}, 1000);
 ```
