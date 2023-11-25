@@ -3,6 +3,7 @@
 ## Project Link https://dom-project-1.stackblitz.io
 
 # Project #1 Code 
+```JavaScript
 const buttons = document.querySelectorAll('.button');
 const body = document.querySelector('body');
 buttons.forEach(function (button) {
@@ -19,3 +20,4 @@ buttons.forEach(function (button) {
     }
   });
 });
+```
