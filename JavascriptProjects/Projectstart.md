@@ -1,6 +1,7 @@
 # Projects related to DOM
 
-## Project Link https://dom-project-1.stackblitz.io
+## Project Link
+[Click here](https://dom-project-1.stackblitz.io)
 
 # Project #1 Code 
 ```JavaScript
