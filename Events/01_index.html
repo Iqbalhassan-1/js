@@ -1,5 +1,96 @@
-// learn Into Events 
-// type,timestamp,defaultprevented
-// target,toElement,srcElement,currentTarget,
-// clientX,clientY,screenX,screenY
-// altkey,ctrkey,shiftkey,keyCode
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="background-color: #212121; color: aliceblue">
+    <div>
+      <h2>Amazing images</h2>
+      <ul id="images">
+        <li>
+          <img
+            src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=400"
+            id="photoShop"
+            width="200px"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/1667088/pexels-photo-1667088.jpeg?auto=compress&cs=tinysrgb&w=400"
+            id="river"
+            width="200px"
+          />
+        </li>
+        <li>
+          <img
+            src="https://images.pexels.com/photos/53977/eagle-owl-raptor-falconry-owl-53977.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            id="Owl"
+            width="200px"
+          />
+        </li>
+        <li><a id="google" href="https://www.google.com.pk/">Google</a></li>
+      </ul>
+    </div>
+  </body>
+  <script>
+    // attachEvent() => internet explore use more before
+    // jQuery => onEventListener
+
+    //**********Learn**************
+
+    // type,timeStamp,defaultPrevented
+    // target,toElement,srcElement,currentTarget
+    // interview => clientY,screenX,screenY
+    // altKey ,ctrlKey,shiftKey,keyCode => project keyboardSpeen checking
+
+    // this approach not good but workings
+    // document.querySelector("#Owl").onclick = function () {
+    //   alert("owl Clicked");
+    // };
+
+    // best approach is
+    // document.getElementById("images").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     console.log("Inside Ul");
+    //   },
+    //   false
+    // );
+    // document.getElementById("Owl").addEventListener(
+    //   "click",
+    //   function (e) {
+    //     e.stopPropagation();
+    //     console.log("OwlClicked");
+    //   },
+    //   false
+    // );
+    // document.getElementById("google").addEventListener("click", function (e) {
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   console.log("google clicked");
+    // });
+    //eventPropagation => inside to outside called bublingevent
+    //eventPropagation => outside to inside called capturingevent
+
+    // eventBubling and evenCapturing
+
+    // CLICK AND REMOVE IMAGE
+    document.querySelector("#images").addEventListener(
+      "click",
+      function (e) {
+        // console.log(e.target); image target
+        console.log(e.target.parentNode); // get parent Li
+        console.log("target", e.target.tagName); // get tagName
+
+        if (e.target.tagName === "IMG") {
+          let removeIt = e.target.parentNode;
+          // removeIt.parentNode.removeChild(removeIt); // working remove element
+          removeIt.remove();
+        }
+      },
+      false
+    );
+  </script>
+</html>
